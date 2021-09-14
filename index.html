@@ -1,9 +1,186 @@
-<!Doctype html>
-< html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>formulaire</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+       body{
+         margin: 0;
+         padding: 0;
+         width:100%;
+         height:100%;
+         overflow: hidden;
+         background-color:#efebe9;
+       }
+       main{
+           margin-top:280px;
+           display: flex;
+           margin-left:419px;
+           margin-right:419px;
+           width:60%;
+           height: 530px;
+           margin: auto;
+           border: none;
+           background-color: white;
+           border-radius: 5px;
+           box-shadow:5px;
+           position:relative;
+           border: ;
+       }
+      
+       .gauche{
+        margin-left: 2%;
+        border:;
+        width:500px;
+       }
+       .droit{
+         background-image:url(IMAGEforM.JPG);
+         width:600px;
+         height:500;
+         /*margin-left: 12%*/;
+         background-size:cover;
+         background-repeat: no-repeat;
+         background-origin:content-box;
+         border:;
+       }
+       input[type=password], input[type=email]{
+          width: 320px;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border:1px solid #d7ccc8 ;        
+          outline: none;
+          border-radius:7px;
+      }
+      input[type=text]{
+         border: none;
+         outline: none;
+         background-color:white;
+         width: 250px;
+         border-radius:7px;
+       }
+       .submit {
+          margin-top: 10px;
+         width:350px;
+         height: 40px;
+         background-color:tomato;
+         border-radius:7px;
+         border: none
+         
+      }
+         
+       
+ 
+       form{
+         border:;
+         margin-top:5px;
+         
+        height:600px;
+        width:400px;
+
+       }
+       .fidset{
+         display:block;
+         background-color: white;
+         
+       }
+       fieldset{
+         margin-bottom:15px;
+        height:5%;
+        width: 320px;
+        background-color:white;
+        border-color: tomato;
+        border-radius: 7px;
+       }
+
+       
+       input[type=text]:focus{
+         border: none;
+         outline: none;
+         
+       }
+
+       input{
+        
+       }
+       .icone{
+         width: 35px;
+         height: 35px;
+        /* margin-top:-1px;*/
+       }
+      
+         
+       
+    </style>
 </head>
 <body>
-<h1>en cours</h1>
+<main>
+  <div class="gauche"><!-- BLOC GAUCHE-->
+    <div class="premier">
+        <img src="user red.png" class="icone" alt="user red.png">
+        <p>
+          <h2>Inscrivez-vous</h2> 
+          creer un compte gratuit sur futur digital
+        </p>
+    </div>
+      <form action="#">
+         
+
+        <br>
+         <fieldset>
+            <legend> Nom complet</legend>
+            <input type="text" class="fidset" name="nom" placeholder="john nash" required>
+         </fieldset>
+            <input type="email" class="fidset" name="e-mail" placeholder="Adresse e-mail" required>
+            <input type="password" class="fidset" name="psw" placeholder="mot de passe"required>
+             <font color=#bcaaa4>le mot de passe doit comporter entre 4 et 6 caractère</font><br>
+            <input type="password" class="fidset" name="rep-pssw" placeholder="confirmez le mot de passe" required>
+            <input type="checkbox">J'aime accepter<font color=red> les conditions</font></input> <br>
+            <button type="submit" class="submit" name="inscrire">s'inscrire</button>
+      </form>
+   
+  </div>
+  <div class="droit"><!-- BLOC DROIT-->
+    <!--img src="IMAGEforM.JPG" class="image" alt="IMAGEforM.JPG" -->
+  </div>
+</main>
+
+<script type="text/javascript">
+  e=true;
+  function changer(){
+      if (e){
+          document.getElementById("mdp").setAttribute("type","text");
+          document.getElementById("eye").src="icon/invisible_60px.png";
+          e=false;
+      }
+
+      else{
+          document.getElementById("mdp").setAttribute("type","password");
+          document.getElementById("eye").src="icon/eye_48px.png";
+          e=true;
+      }
+  }
+</script>
+
+<script type="text/javascript">
+  e=true;
+  function changerVerif(){
+      if (e){
+          document.getElementById("verifMdp").setAttribute("type","text");
+          document.getElementById("eyeVerif").src="icon/invisible_60px.png";
+          e=false;
+      }
+
+      else{
+          document.getElementById("verifMdp").setAttribute("type","password");
+          document.getElementById("eyeVerif").src="icon/eye_48px.png";
+          e=true;
+      }
+  }
+</script>
+
+
+    
 </body>
 </html>
